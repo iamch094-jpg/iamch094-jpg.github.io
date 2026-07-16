@@ -1,0 +1,14 @@
+.quick-nav{position:sticky;top:0;z-index:4;display:flex;gap:7px;overflow-x:auto;background:#f2eee5f5;padding:10px 0 13px;margin-bottom:7px}
+.quick-nav a{white-space:nowrap;text-decoration:none;color:#38473f;background:#fff;border:1px solid #d8d0c3;padding:8px 12px;font-size:12px}
+.quick-nav a:hover{background:#315344;color:#fff}
+#github-section,.popup-card,.section-title,.media-manager{scroll-margin-top:65px}
+.token-row{grid-template-columns:1fr auto auto auto}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin:25px 0 10px}
+.section-title h2{font:600 21px 'Noto Serif KR',serif;margin:0}
+.section-title span{font-size:12px;color:#6e716b}
+.dirty .github-save{box-shadow:0 0 0 3px #d4b55799}
+.token-links{margin:8px 0 12px}.token-links a{display:inline-block;background:#fff8e8;border:1px solid #ead7ad;color:#66552f;text-decoration:none;padding:8px 12px;font-size:12px}
+.ai-options{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}.ai-options button{border:2px solid transparent;background:#eee;padding:0;cursor:pointer}.ai-options button.selected{border-color:#963e2e}.ai-options img{display:block;width:100%;height:58px;object-fit:cover}
+.banner-foot{border-top:1px solid #eee;padding:9px;text-align:center;color:#777;font-size:11px}
+.preview-row .banner.small{flex-basis:220px}.preview-row .banner.medium{flex-basis:300px}.preview-row .banner.large{flex-basis:410px}.preview-row .banner.small img{height:120px}.preview-row .banner.medium img{height:155px}.preview-row .banner.large img{height:215px}
+@media(max-width:560px){.token-row{grid-template-columns:1fr 1fr 1fr}.token-row input{grid-column:1/-1}}
