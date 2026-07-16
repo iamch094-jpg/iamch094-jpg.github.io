@@ -96,10 +96,19 @@ async function detectRepository() {
 }
 async function github(path, options = {}) {
   if (!repository) await detectRepository();
-  const query = (options.method || "GET") === "GET" ? `?ref=${encodeURIComponent(repository.branch)}` : "";
-  const response = await fetch(`https://api.github.com/repos/${repository.owner}/${repository.repo}/contents/${path}${query}`, { ...options, headers: { ...headers(), ...(options.headers || {}) } });
+  const isGet = (options.method || "GET") === "GET";
+  const query = isGet ? `?ref=${encodeURIComponent(repository.branch)}&_=${Date.now()}` : "";
+  const response = await fetch(`https://api.github.com/repos/${repository.owner}/${repository.repo}/contents/${path}${query}`, {
+    ...options,
+    cache: "no-store",
+    headers: { ...headers(), ...(options.headers || {}) }
+  });
   const result = await response.json();
-  if (!response.ok) throw new Error(result.message || `GitHub 요청 실패 (${response.status})`);
+  if (!response.ok) {
+    const error = new Error(result.message || `GitHub 요청 실패 (${response.status})`);
+    error.status = response.status;
+    throw error;
+  }
   return result;
 }
 function bytesToBase64(bytes) {
@@ -234,11 +243,19 @@ async function loadRemote() {
 }
 async function saveText(path, text) {
   if (!repository) await detectRepository();
-  let sha;
-  try { sha = (await github(path)).sha; } catch (_) {}
-  const body = { message: "Update Namdo 187 website from admin page", content: textToBase64(text), branch: repository.branch };
-  if (sha) body.sha = sha;
-  await github(path, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    let sha;
+    try { sha = (await github(path)).sha; } catch (_) {}
+    const body = { message: "Update Namdo 187 website from admin page", content: textToBase64(text), branch: repository.branch };
+    if (sha) body.sha = sha;
+    try {
+      await github(path, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      return;
+    } catch (error) {
+      const shaConflict = error.status === 409 || error.status === 422 || /does not match|sha/i.test(error.message);
+      if (!shaConflict || attempt === 2) throw error;
+    }
+  }
 }
 function localSave() {
   localStorage.setItem(PREVIEW_KEY, JSON.stringify(cleanData()));
