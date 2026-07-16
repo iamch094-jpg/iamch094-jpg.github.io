@@ -125,6 +125,7 @@ async function prepareImage(file, width, height) {
 }
 async function uploadImage(item, type) {
   if (!item._upload) return;
+  if (!repository) await detectRepository();
   const path = `images/uploads/${type}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`;
   await github(path, {
     method: "PUT",
@@ -232,6 +233,7 @@ async function loadRemote() {
   renderAll(); clearDirty(); status("GitHub의 최신 홈페이지 정보를 불러왔습니다.");
 }
 async function saveText(path, text) {
+  if (!repository) await detectRepository();
   let sha;
   try { sha = (await github(path)).sha; } catch (_) {}
   const body = { message: "Update Namdo 187 website from admin page", content: textToBase64(text), branch: repository.branch };
@@ -248,6 +250,7 @@ async function githubSave() {
   try {
     const token = $("githubToken").value.trim();
     if (token) localStorage.setItem(TOKEN_KEY, token);
+    if (!repository) await detectRepository();
     status("사진을 GitHub에 업로드하고 있습니다...");
     for (const popup of data.popups) await uploadImage(popup, "popup");
     for (const room of data.rooms) await uploadImage(room, "room");
