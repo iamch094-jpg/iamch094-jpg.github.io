@@ -1,12 +1,12 @@
 {
   "popups": [
     {
-      "size": "medium",
+      "size": "large",
       "id": "welcome",
       "enabled": true,
       "image": "images/ai-popup-cottage.jpg",
-      "title": "자연 속 독채에서 쉬어가세요",
-      "message": "지리산과 섬진강을 곁에 둔 남도187입니다.",
+      "title": "🏡자연 속 독채에서 쉬어가세요🏡",
+      "message": "✨지리산과 섬진강을 곁에 둔 남도187입니다.✨",
       "buttonEnabled": true,
       "buttonText": "예약하기",
       "link": "https://booking.ddnayo.com/?accommodationId=15392"
@@ -16,11 +16,22 @@
       "id": "bbq",
       "enabled": true,
       "image": "images/ai-popup-bbq.jpg",
-      "title": "프라이빗 바비큐",
-      "message": "따뜻한 조명 아래 우리만의 저녁을 즐겨보세요.",
+      "title": "🍖프라이빗 바비큐🍖",
+      "message": "🌿따뜻한 조명 아래 우리만의 저녁을 즐겨보세요.🌿",
       "buttonEnabled": true,
       "buttonText": "공간 보기",
       "link": "#space"
+    },
+    {
+      "id": "popup-1784213947942",
+      "enabled": true,
+      "size": "small",
+      "image": "images/ai-popup-illustration.jpg",
+      "title": "📅예약문의",
+      "message": "📞010-6878-0362",
+      "buttonEnabled": true,
+      "buttonText": "자세히 보기",
+      "link": "#guide"
     }
   ],
   "rooms": [
