@@ -23,9 +23,9 @@
       "link": "#space"
     },
     {
+      "size": "small",
       "id": "popup-1784213947942",
       "enabled": true,
-      "size": "small",
       "image": "images/ai-popup-illustration.jpg",
       "title": "📅예약문의",
       "message": "📞010-6878-0362",
