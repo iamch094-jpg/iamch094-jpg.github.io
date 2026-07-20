@@ -1,9 +1,9 @@
 {
   "popups": [
     {
+      "size": "medium",
       "id": "welcome",
       "enabled": true,
-      "size": "medium",
       "image": "images/ai-popup-cottage.jpg",
       "title": "자연 속 독채에서 쉬어가세요",
       "message": "지리산과 섬진강을 곁에 둔 남도187입니다.",
@@ -12,31 +12,90 @@
       "link": "https://booking.ddnayo.com/?accommodationId=15392"
     },
     {
+      "size": "medium",
       "id": "bbq",
       "enabled": true,
-      "size": "medium",
       "image": "images/ai-popup-bbq.jpg",
       "title": "프라이빗 바비큐",
       "message": "따뜻한 조명 아래 우리만의 저녁을 즐겨보세요.",
       "buttonEnabled": true,
       "buttonText": "공간 보기",
       "link": "#space"
+    },
+    {
+      "size": "small",
+      "id": "popup-1784520195737",
+      "enabled": true,
+      "image": "images/ai-popup-illustration.jpg",
+      "title": "📅예약문의",
+      "message": "📞010 6878 0362",
+      "buttonEnabled": false,
+      "buttonText": "공간 보기",
+      "link": "#space"
     }
   ],
   "rooms": [
-    {"id":"room-1","image":"images/1784091966416EDcisw9vhcFYEVqOu87.jpg","alt":"남도187 객실"},
-    {"id":"room-2","image":"images/1784091977396NwtsdalVJvIAydZhX8y.jpg","alt":"남도187 객실"},
-    {"id":"room-3","image":"images/1784091977602bdfB5RY42FQVFJ9qvtE.jpg","alt":"남도187 객실"},
-    {"id":"room-4","image":"images/17840919794480qQ7K8nSnK1GvT6TC2F.jpg","alt":"남도187 객실"},
-    {"id":"room-5","image":"images/1784091979524JDp4YwHPaCRFed4fC9D.jpg","alt":"남도187 객실"},
-    {"id":"room-6","image":"images/1784091980334wqnUEhGrhEyhb5Jciz8.jpg","alt":"남도187 객실"},
-    {"id":"room-7","image":"images/1784091980471cGPNAbERw4Rb2mqcfBU.jpg","alt":"남도187 객실"},
-    {"id":"room-8","image":"images/1784091981133j2K8mLqkpd3343VXgXd.jpg","alt":"남도187 객실"}
+    {
+      "id": "room-1",
+      "image": "images/1784091966416EDcisw9vhcFYEVqOu87.jpg",
+      "alt": "남도187 객실"
+    },
+    {
+      "id": "room-2",
+      "image": "images/1784091977396NwtsdalVJvIAydZhX8y.jpg",
+      "alt": "남도187 객실"
+    },
+    {
+      "id": "room-3",
+      "image": "images/1784091977602bdfB5RY42FQVFJ9qvtE.jpg",
+      "alt": "남도187 객실"
+    },
+    {
+      "id": "room-4",
+      "image": "images/17840919794480qQ7K8nSnK1GvT6TC2F.jpg",
+      "alt": "남도187 객실"
+    },
+    {
+      "id": "room-5",
+      "image": "images/1784091979524JDp4YwHPaCRFed4fC9D.jpg",
+      "alt": "남도187 객실"
+    },
+    {
+      "id": "room-6",
+      "image": "images/1784091980334wqnUEhGrhEyhb5Jciz8.jpg",
+      "alt": "남도187 객실"
+    },
+    {
+      "id": "room-7",
+      "image": "images/1784091980471cGPNAbERw4Rb2mqcfBU.jpg",
+      "alt": "남도187 객실"
+    },
+    {
+      "id": "room-8",
+      "image": "images/1784091981133j2K8mLqkpd3343VXgXd.jpg",
+      "alt": "남도187 객실"
+    }
   ],
   "facilities": [
-    {"id":"facility-1","image":"images/exterior-13.jpg","alt":"남도187 부대시설"},
-    {"id":"facility-2","image":"images/exterior-16.jpg","alt":"남도187 부대시설"},
-    {"id":"facility-3","image":"images/exterior-17.jpg","alt":"남도187 부대시설"},
-    {"id":"facility-4","image":"images/exterior-19.jpg","alt":"남도187 야외 공간"}
+    {
+      "id": "facility-1",
+      "image": "images/exterior-13.jpg",
+      "alt": "남도187 부대시설"
+    },
+    {
+      "id": "facility-2",
+      "image": "images/exterior-16.jpg",
+      "alt": "남도187 부대시설"
+    },
+    {
+      "id": "facility-3",
+      "image": "images/exterior-17.jpg",
+      "alt": "남도187 부대시설"
+    },
+    {
+      "id": "facility-4",
+      "image": "images/exterior-19.jpg",
+      "alt": "남도187 야외 공간"
+    }
   ]
 }
