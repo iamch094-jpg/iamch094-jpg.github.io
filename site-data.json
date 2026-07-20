@@ -21,6 +21,17 @@
       "buttonEnabled": true,
       "buttonText": "공간 보기",
       "link": "#space"
+    },
+    {
+      "size": "small",
+      "id": "popup-1784520195737",
+      "enabled": true,
+      "image": "images/ai-popup-illustration.jpg",
+      "title": "📅예약문의",
+      "message": "📞010 6878 0362",
+      "buttonEnabled": false,
+      "buttonText": "공간 보기",
+      "link": "#space"
     }
   ],
   "rooms": [
